@@ -4,9 +4,11 @@ namespace UACSecurity.Classes
 {
     public class AlertMessengerSms : IAlertMessenger
     {
-        public void SendAlert()
+        public string AlertStatus { get; set; }
+
+        public string SendAlert()
         {
-            Console.WriteLine("Sending an SMS Alert ...");
+            return AlertStatus = "Sending an SMS Alert message ...";
         }
     }
 }

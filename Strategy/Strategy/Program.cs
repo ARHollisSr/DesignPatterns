@@ -1,4 +1,5 @@
-﻿using UACSecurity.Classes;
+﻿using System;
+using UACSecurity.Classes;
 
 namespace Strategy
 {
@@ -8,9 +9,9 @@ namespace Strategy
         {
             var securityServices = new UACSecurity.Classes.SecurityServices();
             securityServices.SetAlertMessenger(new AlertMessengerSms());
-            securityServices.SendAlert();
+            Console.WriteLine(securityServices.SendAlert());
             securityServices.SetAlertMessenger(new AlertMessengerCellular());
-            securityServices.SendAlert();
+            Console.WriteLine(securityServices.SendAlert());
         }
     }
 }

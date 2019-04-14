@@ -4,9 +4,11 @@ namespace UACSecurity.Classes
 {
     public class AlertMessengerWeb : IAlertMessenger
     {
-        public void SendAlert()
+        public string AlertStatus { get; set; }
+
+        public string SendAlert()
         {
-            Console.WriteLine("Sending a Web Alert Message");
+           return AlertStatus = "Sending a Web Alert message ...";
         }
     }
 }

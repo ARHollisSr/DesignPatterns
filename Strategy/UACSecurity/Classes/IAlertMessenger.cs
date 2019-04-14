@@ -2,6 +2,7 @@
 {
     public interface IAlertMessenger
     {
-        void SendAlert();
+        string AlertStatus { get; set; }
+        string SendAlert();
     }
 }

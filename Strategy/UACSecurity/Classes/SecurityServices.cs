@@ -11,11 +11,11 @@ namespace UACSecurity.Classes
             _alertMessenger = iam ?? throw new ArgumentNullException(nameof(iam));
         }
 
-        public void SendAlert()
+        public string SendAlert()
         {
             if (_alertMessenger == null)
                 throw new InvalidOperationException("Must set alert messenger type first");
-            _alertMessenger.SendAlert();
+            return _alertMessenger.SendAlert();
         }
 
         public void FirmwareUpdate()
